@@ -98,6 +98,21 @@ def perform_hotkey(keys: List[str]) -> None:
         pag.keyUp(k)
 
 
+def correct_key_names(keys: List[str]) -> List(str):
+    """
+    Return a List of strings containing the key name sin keys converted to forms
+    which can be used by pyautogui functions.
+    """
+    joined = " ".join(keys)
+    joined.replace("control", "ctrl")
+    joined.replace("page down", "pagedown")
+    joined.replace("page up", "pageup")
+    joined.replace("volume down", "volumedown")
+    joined.replace("volume up", "volumeup")
+    joined.replace("page down", "pagedown")
+    joined.replace("print screen", "printscreen")
+
+
 def execute_command(parsed: List[str]) -> None:
     """
     Execute the command described in parsed.
