@@ -98,7 +98,7 @@ def perform_hotkey(keys: List[str]) -> None:
         pag.keyUp(k)
 
 
-def correct_key_names(keys: List[str]) -> List(str):
+def correct_key_names(keys: List[str]) -> List[str]:
     """
     Return a List of strings containing the key name sin keys converted to forms
     which can be used by pyautogui functions.
