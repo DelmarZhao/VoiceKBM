@@ -16,6 +16,7 @@ How it works
 This program makes use of the Google Cloud Speech API wrapper from the Python SpeechRecognition library to continuously listen for and transribe designated voice commands (outlined in Instructions.txt) until the command to stop is given or the program is manually stopped.
 
 The program parses the transcribed voice commands and uses the PyAutoGUI python module to programmatically control the mouse and keyboard. 
+
 What you can do with this code
 ------------------------------
 **You can feel free to fork this code, use it in your own programs, or whatever else you want to do with it.** If you decide to use this code in one of your own projects, please let me know as I'm interested to see what you do with it!
