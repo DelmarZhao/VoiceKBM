@@ -28,7 +28,7 @@ If you were to run this bot on your computer, here's what you would do:
     python VoiceKBM.py
 
 **Ways to help me out:**
-- The bot currently has trouble transcribing some voice commands partly because it exempts the first few fractions of a second of the voice command to measure and adjust for ambient/backgroud noise. Maybe find a better way to handle the transcription.
+- The bot currently has trouble transcribing some voice commands partly because it exempts the first few fractions of a second of the voice command to measure and adjust for ambient/backgroud noise. Commands beginning with 'hold' in particular are commonly incorrectly transcribed. Maybe find a better way to handle the transcription.
 - Make efficiency improvements in this program
 - Add more commands.
 - Report and fix any bugs you may encounter.

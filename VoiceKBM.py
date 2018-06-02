@@ -111,12 +111,14 @@ def correct_key_names(keys: List[str]) -> List[str]:
     joined.replace("volume up", "volumeup")
     joined.replace("page down", "pagedown")
     joined.replace("print screen", "printscreen")
+    return joined.split()
 
 
 def execute_command(parsed: List[str]) -> None:
     """
     Execute the command described in parsed.
     """
+    parsed = correct_key_names(parsed)
     # get the mouse's current position
     x, y = pag.position()
     # check for "move to" command
@@ -131,10 +133,10 @@ def execute_command(parsed: List[str]) -> None:
     elif parsed[1] == "click":
         # must be a left, middle, or right click
         COMMANDS["left click"][0](x, y, button=parsed[0])
-    elif parsed[0] == "hold":
+    elif parsed[0] == "hold" and parsed[1] in ["left", "middle", "right"]:
         # check for hold down mouse button
         COMMANDS["hold right"][0](x, y, button=parsed[1])
-    elif parsed[0] == "release":
+    elif parsed[0] == "release" and parsed[1] in ["left", "middle", "right"]:
         # check for release mouse button
         COMMANDS["release right"][0](x, y, button=parsed[1])
     elif parsed[0] == "scroll":
@@ -232,7 +234,6 @@ if __name__ == '__main__':
                     print("You said: {}. Executing command...".format(
                         command["transcription"]))
                 elif base_command in COMMANDS and "key" in base_command and len(
-                    #TODO adjust transcriptions for key names (I.e "control" -> "ctrl")
                         parsed) == COMMANDS[base_command][1] and parsed[2] in KEYBOARD_KEYS:
                     execute_command(parsed)
                     print("You said: {}. Executing command...".format(

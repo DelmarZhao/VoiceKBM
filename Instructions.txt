@@ -1,0 +1,48 @@
+This is a list of valid commands for VoiceKBM and instructions for how to use them.
+
+First, the pixel coordinate system used by the mouse commands has the upper-left corner as the origin - coordianates of (0,0).
+The bottom-right corner of your screen has coordinates of the resolution of your screen, for example (1920, 1080) or (1600, 900).
+Giving mouse commands with coordinate arguments greater than the resolution of your screen allows for will simply stop the movement command at the
+maximum x or y coordinate based on your screen's resolution. No negative integers may be supplied as coordinates. 
+
+In the following list of commands (#) indicates a non-negative integer to be supplied by the user, and (K#) represents the name of a keybaord key
+to be supplied by the user, and [T] represents a list of words to be supplied by the user.
+
+---MOUSE COMMANDS---
+'move to (1) (2)' - moves the mouse to the point on the screen with x-coordinate (1) and y-coordinate (2)
+	Example: 'move to 400 600'
+'move up (1)' - moves the mouse up by (1) pixels
+	Example: 'move up 400'
+'move down (1)' - moves the mouse down by (1) pixels
+	Example: 'move down 400'
+'move left (1)' - moves the mouse left by (1) pixels
+	Example: 'move left 400'
+'move right (1)' - moves the mouse right by (1) pixels
+	Example: 'move right 400'
+'left click' - clicks the left mouse button once at the mouse's current location
+'double click' - clicks the left mouse button twice at the mouse's current location
+'right click' - clicks the right mouse button once at the mouse's current location
+'middle click' - clicks the middle mouse button once at the mouse's current location
+'hold left' - holds down the left mouse button at the mouse's current location
+'hold right' - holds down the right mouse button at the mouse's current location
+'hold middle' - holds down the middle mouse button at the mouse's current location
+'release left' - releases the left mouse button at the mouse's current location
+'release right' - releases the right mouse button at the mouse's current location
+'release middle' - releases the middle mouse button at the mouse's current location
+'scroll up (1)' - mouse scroll up by (1) units. *Note that (1) is not in pixels, and the units scrolled will vary based on operating system
+	Example: 'scroll up 300'
+'scroll down (1)' - mouse scroll down by (1) units. *Note that (1) is not in pixels, and the units scrolled will vary based on operating system
+	Example: 'scroll down 300'
+
+---KEYBOARD COMMANDS---
+'press key (K1)' - press and release keyboard key (K1)
+	Example: 'press key d'
+'hold key (K1)' - hold down keyboard key (K1)
+	Example: 'hold key space'
+'release key (K1)' - release keyboard key (K1)
+	Example: 'release key backspace'
+'use shortcut (K1) (K2) (K3) ... (K#)' - press and hold keyboard keys (K1) through (K#) in order and then release them in reverse order
+'type this [T]' - type the list of words [T]
+
+---OTHER COMMANDS---
+'quit program' - terminates the execution of the program.
