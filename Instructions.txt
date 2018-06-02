@@ -42,7 +42,9 @@ to be supplied by the user, and [T] represents a list of words to be supplied by
 'release key (K1)' - release keyboard key (K1)
 	Example: 'release key backspace'
 'use shortcut (K1) (K2) (K3) ... (K#)' - press and hold keyboard keys (K1) through (K#) in order and then release them in reverse order
+	Example: 'use shortcut control c'
 'type this [T]' - type the list of words [T]
+	Example: 'type this hello world'
 
 ---OTHER COMMANDS---
 'quit program' - terminates the execution of the program.
